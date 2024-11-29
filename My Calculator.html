@@ -132,11 +132,13 @@
             }
         }
         function calculatelog(){
-            if(x !== ""){
             var x = document.getElementById("inputBox").value;
+            if(x !== ""){
             var result = Math.log10(parseFloat(x));
             result=result.toFixed(3)
             document.getElementById("inputBox").value = result;
+            } else {
+                document.getElementById("inputBox").value = "ENTER THE NUMBER";
             }
         }
         function factorial(){
