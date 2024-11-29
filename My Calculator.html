@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <marquee behavior="alternate" scrollamount="7" direction="right" id="heading">WELCOME TO MY CALCULATOR</marquee>
+    <link rel="stylesheet" type="text/css" href="My Calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="mainsection">
+        <div class="mainbox animate__animated animate__zoomIn" style="margin: 0px;">
+            <div class="box">
+                <h2 id="heading1" style="margin: 7.5px;">CALCULATOR<br>DESCRIPTION</h2>
+                <p class="description" style="margin: 7.5px;">This is a basic calculator designed to handle essential arithmetic operations with added functionality for more advanced calculations. It features dedicated buttons for logarithms (log), factorials (!), the mathematical constant π (pi), and square root (√) calculations. Whether you're performing simple math or exploring more complex computations, this calculator provides a user-friendly interface for quick and accurate results.</p>
+                <p class="description" style="margin: 7.5px;">"This calculator includes dedicated buttons for sine (sin), cosine (cos), and tangent (tan) that seamlessly convert degree inputs into radian values. Simply enter the angle in degrees, then click the desired function button to instantly obtain the corresponding radian result."</p>
+            </div>
+        </div>
+    <div class="mainbox animate__animated animate__zoomIn">
+        <div class="allbuttons">
+            <div>
+                <input type="text" id="inputBox"></div>
+            <div class="buttons1">
+                <button class="button2" onclick="sinDegree()">sin</button>
+                <button class="button2" onclick="cosDegree()">cos</button>
+                <button class="keybutton" onclick="clear1()">AC</button>
+                <button class="keybutton" onclick="delete1()">DEL</button></div>
+                <div class="buttons1">
+                    <button class="button2" onclick="tanDegree()">tan</button>
+                    <button class="button2" onclick="pick('3.14')">π</button>
+                    <button class="button1" onclick="pick('%')">%</button>
+                    <button class="button1" onclick="pick('/')">/</button></div>
+            <div class="buttons1">
+                <button class="button" onclick="pick(7)">7</button>
+                <button class="button" onclick="pick(8)">8</button>
+                <button class="button" onclick="pick(9)">9</button>
+                <button class="button1" onclick="pick('*')">*</button></div>
+            <div class="buttons1">
+                <button class="button" onclick="pick(4)">4</button>
+                <button class="button" onclick="pick(5)">5</button>
+                <button class="button" onclick="pick(6)">6</button>
+                <button class="button1" onclick="pick('-')">-</button></div>
+            <div class="buttons1">
+                <button class="button" onclick="pick(1)">1</button>
+                <button class="button" onclick="pick(2)">2</button>
+                <button class="button" onclick="pick(3)">3</button>
+                <button class="button1" onclick="pick('+')">+</button></div>
+                <div class="buttons1">
+                    <button class="button" onclick="pick(0)">0</button>
+                    <button class="button" onclick="pick('.')">.</button>
+                    <button class="button1" onclick="solve()" style="width: 171px;">=</button></div>
+            <div class="buttons1">
+                <button class="button2" onclick="sqrt()"><b>√</b></button>
+                <button class="button2" onclick="factorial()">x!</button>
+                <button class="button2" onclick="calculatelog()" style="width: 171px;">log</button></div>
+        </div>
+        <div>
+            <h5 id="name">Made By : Gurumeet Saini</h5>
+        </div>
+    </div>
+    </div>
+    <script>
+        function pick(val){
+            document.getElementById("inputBox").value+=val;
+        }
+        function solve(){
+            var x=document.getElementById("inputBox").value;
+            var y=eval(x);
+            y=y.toFixed(2)
+            document.getElementById("inputBox").value=y;
+        }
+        function clear1(){
+            document.getElementById("inputBox").value="";
+        }
+        function delete1(){
+            var x=document.getElementById("inputBox").value;
+            var y=x.slice(0,-1)
+            document.getElementById("inputBox").value=y;
+        }
+        function sinDegree(){
+            var x = document.getElementById("inputBox").value;
+            if (x!==""){
+            var radians = parseFloat(x) * (Math.PI / 180);
+            var result = Math.sin(radians);
+            result=result.toFixed(2)
+            document.getElementById("inputBox").value = result;
+            } else{
+                document.getElementById("inputBox").value = "ENTER THE NUMBER";
+            }
+        }
+        function cosDegree(){
+            var x = document.getElementById("inputBox").value;
+            if (x!==""){
+            var radians = parseFloat(x) * (Math.PI / 180);
+            var result = Math.cos(radians);
+            result=result.toFixed(2)
+            document.getElementById("inputBox").value = result;
+            } else{
+                document.getElementById("inputBox").value = "ENTER THE NUMBER";
+            }
+        }
+        function tanDegree(){
+            var x = document.getElementById("inputBox").value;
+            if (x !== "") {
+                var degrees = parseFloat(x);
+                if ((degrees % 180 === 90) || (degrees % 360 === -270)) {
+                    document.getElementById("inputBox").value = "UNDEFINED";
+                } else {
+                    var radians = (degrees * Math.PI) / 180;
+                    var result = Math.tan(radians);
+                    result=result.toFixed(2)
+
+                    if (Math.abs(result) < 1e-15) {
+                        result = 0; 
+                    }
+            
+                    document.getElementById("inputBox").value = result;
+                }
+            } else {
+                document.getElementById("inputBox").value = "ENTER THE NUMBER";
+            }
+        }
+        function sqrt(){
+            var x = document.getElementById("inputBox").value;
+            if(x>=0){
+                var result=Math.sqrt(x);
+                result=result.toFixed(3)
+                document.getElementById("inputBox").value = result;
+            }else{
+                document.getElementById("inputBox").value = "ERROR";
+            }
+        }
+        function calculatelog(){
+            if(x !== ""){
+            var x = document.getElementById("inputBox").value;
+            var result = Math.log10(parseFloat(x));
+            result=result.toFixed(3)
+            document.getElementById("inputBox").value = result;
+            }
+        }
+        function factorial(){
+            var x = document.getElementById("inputBox").value;
+            var result=1;
+            if (x === "") {
+                document.getElementById("inputBox").value = "ENTER THE NUMBER"
+                return;
+            }
+            x = parseInt(x);
+            if (x < 0) {
+                document.getElementById("inputBox").value = "ERROR" 
+                return;
+            }
+            for(var i=1; i<=x; i++){
+                result*=i;
+            }
+            document.getElementById("inputBox").value=result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+body{
+    background-image: url(Background.png);
+    background-size: 100%;
+}
+#heading{
+    font-size: 50px;
+    color: black;
+    font-family: 'Showcard Gothic';
+}
+.mainsection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.box{
+    height: 610px;
+    width: 350px;
+    background-color: rgb(104, 255, 119, 0.8);
+    box-shadow: 0 0 7px 7px white;
+    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 53px;
+}
+#heading1{
+    font-size: 35px;
+    font-family: 'Showcard Gothic';
+    -webkit-text-fill-color: rgb(35, 213, 0, 0.8);
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1.12px;
+}
+.description{
+    color: black;
+    font-family: 'Gill Sans MT';
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    max-width: 300px;
+    word-spacing: 0.02em;
+    font-weight: bold;
+}
+.mainbox{
+    background-image: url(My\ Calculator.jpg);
+    background-size: 100%;
+    width: 450px;
+    height: 710px;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0 0 7px 7px rgb(147, 248, 255);
+    margin: 30px;
+}
+#inputBox{
+    width: 359px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-left: 10px;
+    transition: 0.3s ease;
+    text-align: end;
+}
+.allbuttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.keybutton{
+    width: 80px;
+    height: 60px;
+    background-color: rgb(35, 213, 0, 0.8);
+    border: 3px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.button{
+    width: 80px;
+    height: 60px;
+    background-color: rgba(74, 74, 255, 0.8);
+    border: 3px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.button1{
+    width: 80px;
+    height: 60px;
+    background-color: rgb(104, 255, 119, 0.8);
+    border: 3px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.button2{
+    width: 80px;
+    height: 60px;
+    background-color: rgb(147, 248, 255, 0.8);
+    border: 3px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#name{
+    height: 30px;
+    width: 270px;
+    background-color: rgb(35, 213, 0, 0.8);
+    box-shadow: 0 0 5px 5px white;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.button:hover{
+    cursor: pointer;
+    background: rgba(74, 74, 255);
+    box-shadow: 0 0 5px 5px rgba(74, 74, 255),
+                0 0 20px rgba(74, 74, 255),
+                0 0 60px rgba(74, 74, 255),
+                0 0 150px rgba(74, 74, 255);
+}
+
+.button1:hover{
+    cursor: pointer;
+    background: rgb(104, 255, 119);
+    box-shadow: 0 0 5px 5px rgb(104, 255, 119),
+                0 0 20px rgb(104, 255, 119),
+                0 0 60px rgb(104, 255, 119),
+                0 0 150px rgb(104, 255, 119);
+}
+
+.keybutton:hover{
+    cursor: pointer;
+    background: rgb(35, 213, 0);
+    box-shadow: 0 0 5px 5px rgb(35, 213, 0),
+                0 0 20px rgb(35, 213, 0),
+                0 0 60px rgb(35, 213, 0),
+                0 0 150px rgb(35, 213, 0);
+}
+.button2:hover{
+    cursor: pointer;
+    background: rgb(147, 248, 255);
+    box-shadow: 0 0 5px 5px rgb(147, 248, 255),
+                0 0 20px rgb(147, 248, 255),
+                0 0 60px rgb(147, 248, 255),
+                0 0 150px rgb(147, 248, 255);
+}
