@@ -81,10 +81,10 @@
         function sinDegree(){
             var x = document.getElementById("inputBox").value;
             if (x!==""){
-            var radians = parseFloat(x) * (Math.PI / 180);
-            var result = Math.sin(radians);
-            result=result.toFixed(2)
-            document.getElementById("inputBox").value = result;
+                var radians = parseFloat(x) * (Math.PI / 180);
+                var result = Math.sin(radians);
+                result=result.toFixed(2)
+                document.getElementById("inputBox").value = result;
             } else{
                 document.getElementById("inputBox").value = "ENTER THE NUMBER";
             }
@@ -92,10 +92,10 @@
         function cosDegree(){
             var x = document.getElementById("inputBox").value;
             if (x!==""){
-            var radians = parseFloat(x) * (Math.PI / 180);
-            var result = Math.cos(radians);
-            result=result.toFixed(2)
-            document.getElementById("inputBox").value = result;
+                var radians = parseFloat(x) * (Math.PI / 180);
+                var result = Math.cos(radians);
+                result=result.toFixed(2)
+                document.getElementById("inputBox").value = result;
             } else{
                 document.getElementById("inputBox").value = "ENTER THE NUMBER";
             }
@@ -134,9 +134,9 @@
         function calculatelog(){
             var x = document.getElementById("inputBox").value;
             if(x !== ""){
-            var result = Math.log10(parseFloat(x));
-            result=result.toFixed(3)
-            document.getElementById("inputBox").value = result;
+                var result = Math.log10(parseFloat(x));
+                result=result.toFixed(3)
+                document.getElementById("inputBox").value = result;
             } else {
                 document.getElementById("inputBox").value = "ENTER THE NUMBER";
             }
