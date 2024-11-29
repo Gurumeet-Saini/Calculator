@@ -1,4 +1,4 @@
-<pre>I'm excited to share my project- a calculator with advanced features like logarithms, factorials,a π (pi) button,<br> square root calculations and trigonometric calculations! 🌟 This project was a fantastic <br>opportunity to enhance my web development skills and apply concepts in JavaScript for interactive functionality.
+<pre>I'm excited to share my project- a calculator with advanced features like logarithms, factorials,a π (pi) button, <br>square root calculations and trigonometric calculations! 🌟 This project was a fantastic opportunity <br>to enhance my web development skills and apply concepts in JavaScript for interactive functionality.
 Key Features:
 ✅ Basic arithmetic operations (add, subtract, multiply, divide)
 ✅ Sine, cosine, and tangent calculations (Degree-to-radian conversion)
